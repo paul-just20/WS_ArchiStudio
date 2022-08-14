@@ -9,6 +9,8 @@
     <!-- Font Awesome V6.1.1 CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="cstyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- Smartsupp Live Chat script -->
       <script type="text/javascript">
         var _smartsupp = _smartsupp || {};
@@ -20,11 +22,42 @@
           c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
         })(document);
         </script>
+        <script type="text/javascript">
+               $(document).ready(function(){
+                $("index.html#top").scrollTop(300);
+        $("#subscribe").modal('show');
+    });
+        </script>
 </head>
-<body id>
+<body>
+  <!-- Modal PopUp  -->
+  <div id="subscribe" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h4 class="modal-title">Join our Newsletter!</h4>
+                <button type="button" id="closeModal" class="close" data-bs-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="./images/newsletter-subscribe.png" width="80%" class="p-md-3 p-sm-2 img-fluid">
+              <span class="d-block my-md-3 my-sm-0 lh-sm-sm">Subscribe to our newsletter in order not to miss new projects and services of W/S Architectural Design Studio</span>
+                <form action="https://formsubmit.co/d8ecfe2cd27b1166a010888d97484598" method="post">
+                  <div class="mx-md-5 mt-sm-2">
+                    <div class="input-group py-md-2 py-sm-5 mb-md-3 mb-sm-5">
+                      <input type="hidden" name="subscription" class="form-control" value="Subscription Information">
+                       <input type="email" name="email" class="form-control1 rounded-start" placeholder="Enter email" aria-label="Recipient's email" aria-describedby="button-addon2" required>
+                       <button class="btn btn-success border-rad" type="submit" id="button-addon2">Subscribe!</button>
+                     </div>
+                 </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg m-0 p-0 fixed-top" id="mainNav">
         <div class="container-xl">
-          <a class="navbar-brand" href="#top">
+          <a class="navbar-brand" href="index.html">
                 <img src="wslogo2.png" alt="WhiteSquare_Design_Studio" height="52" class="d-inline-block align-text-center">
                 <div class="text-wrap" style="width: 10rem; font-size: 0.8rem; line-height: 1rem; float: right; align-items: center; margin-top: 2px;">
                   WHITESQUARE ARCHITECTURAL DESIGN STUDIO
@@ -36,15 +69,14 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto p-3 mb-lg-0">
               <li class="nav-item py-sm-2">
-                <a class="nav-link" href="#top">HOME</a>
+                <a class="nav-link" href="index.html#top">HOME</a>
               </li>
               <li class="nav-item dropdown py-sm-2">
                 <a class="nav-link dropdown-toggle" href="#projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   PROJECTS</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">All Projects</a></li>
+                  <li><a class="dropdown-item" href="#projects">Projects Catalogue</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
@@ -52,21 +84,18 @@
                 <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   SERVICES</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">All Services</a></li>
+                    <li><a class="dropdown-item" href="#services">Services Category</a></li>
                     <li><a class="dropdown-item" href="#">3D Visualization</a></li>
                     <li><a class="dropdown-item" href="#">Interior Design</a></li>
                     <li><a class="dropdown-item" href="#">Exterior Design</a></li>
                   </ul>
-              </li>
-              <li class="nav-item py-sm-2">
-                <a class="nav-link" href="#partners" role="button" aria-expanded="false"> OUR PARTNERS</a>
-              </li>
+                </li>
               <li class="nav-item py-sm-2">
                 <a class="nav-link" href="#about-us" role="button" aria-expanded="false"> ABOUT US</a>
               </li>
             </ul>
-            <form class="d-flex " role="search">
-              <button class="btn btn-lg mx-auto" type="submit" id="custbtn-reverse">Book Now!</button>
+            <form class="d-flex">
+              <a class="btn btn-lg mx-auto" href="#contact-us" type="button" id="custbtn-reverse">Book Now!</a>
             </form>
           </div>
         </div>
@@ -75,17 +104,17 @@
 <!-- MAIN-->
 <section id ="top">
   <div class="mainbanner"> 
-    <img src="madison-project.jpg" alt="" class="w-100 imgrepos">     
+    <img src="madison-project.jpg" alt=""  class="w-100">     
         <div class="overlay">
-            <h1 class="text-center display-2 text-white border-top ">Plan. Design. Build</h1>              
-            <div class="d-grid">
-                <button class="btn btn-light mx-auto  mt-3" id="custbtn-reverse">Explore Projects</button>
-                <button class="btn btn-light mx-auto  mt-3" id="custbtn-reverse">Make a Project Request</button>
+            <h1 class="text-center display-xs-5 display-2 text-white border-top ">Plan. Design. Build</h1>              
+            <div class="d-inline-block m-sm-0 p-sm-0">
+                <a class="btn btn-light mx-auto  mt-md-3 mt-sm-0" href="#projects" id="custbtn-reverse">Explore Projects</a>
+                <a  class="btn btn-light mx-auto  mt-md-3 mt-sm-0" id="custbtn-reverse">Make a Project Request</a>
             </div>
               <br>
               <figure class="text-center text-white mt-3">
                 <blockquote class="blockquote">
-                  <p><strong>"WHITE</strong> is Purity, <strong>SQUARE</strong> is Integrity."</p>
+                  <p class="p-0 m-0"><strong>"WHITE</strong> is Purity, <strong>SQUARE</strong> is Integrity."</p>
                 </blockquote>
                 <figcaption class="blockquote-footer text-white">
                   <cite title="Source Title">WhiteSquare Architectural Design Studio</cite>
@@ -96,8 +125,8 @@
 </section>
 
 <!--  Projects Section -->
-<div id="projects" class="projects bg-light  py-5  ">
-  <h1 class="text-center mt-5 mb-3">OUR PROJECTS</h1>
+<div id="projects" class="projects bg-light py-5  ">
+  <h1 class="text-center mt-5 mb-3">OUR BUILDING PROJECTS</h1>
  
   <div class="container ">
       <div class="row g-4">
@@ -185,32 +214,41 @@
   </div>
 </div>
  <!-- ======= Our Services Section ======= -->
- <div id="services" class="services py-5">
-    <h1 class="text-center mt-5 mb-3">OUR SERVICES</h1>
+ <div id="services" class="services py-3">
+    <h1 class="text-center mt-5 mb-3">OUR DESIGN SERVICES</h1>
   <div class="container">
     <div class="row">
-      
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+
         <div class="icon-box">
+          <a href="">
           <div class="icon"><i class="fas fa-cube"></i></div>
-          <h4><a href="">3D Visualization</a></h4>
-          <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          <h1 class="display-1 display-xs-2 py-md-2 m-0 lh-1 fw-light">35</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
+          <h4>3D Visualization</h4>
+          <p>We design beautifully and tell by creating realistic elements and details. This can be combination of both Interior and Exterior Spaces.</p>
+        </a>
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
         <div class="icon-box">
+          <a href="">
           <div class="icon"><i class="fas fa-chair"></i></div>
-          <h4><a href="">Interior Designs</a></h4>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          <h1 class="display-1 py-2 m-0 lh-1 fw-light">12</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
+          <h4>Interior Designs</h4>
+          <p>We aesthetically practice the art of design spaces suited to its purpose.</p>
+        </a>
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
         <div class="icon-box">
+          <a href="">
           <div class="icon"><i class="fas fa-archway"></i></div>
-          <h4><a href="">Exterior Designs</a></h4>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          <h1 class="display-1 py-2 m-0 lh-1 fw-light">67</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
+          <h4>Exterior Designs</h4>
+          <p>We increase property value through art patterns of physical structure and materials to result in greater productivity.</p>
+        </a>
         </div>
       </div>
 
@@ -218,18 +256,6 @@
 
   </div>
 </div><!-- End Services Section -->
-
-<!-- OUR PARTNERS -->
-<div id ="partners" class="partners py-5">
-  <h1 class="text-center">OUR PARTNERS</h1>
-
-    <div class="container">
-      <div class="row"></div>
-    </div>
-
-
-  </div>
-
 
 <!-- ABOUT US -->
 <div id="about-us" class="about-us py-5">
@@ -272,18 +298,162 @@
 </div>
       </div>
 
+<!-- Contact-Us -->
+<section id="contact-us" class="bg-light pt-md-5 pt-sm-0 mt-md-5 mt-sm-0 text-center mb-md-3">
+  <div class="container">
+    <div class="row gx-sm-5 py-3">
+      <!--  Embedded Map  -->
+      <div class="col-md-6">
+        <h2 class="text-center py-4 py-sm-2 bg-dark text-white">OUR LOCATION</h2>
+        <iframe class="p-md-2 p-sm-2 mb-md-5 mb-sm-2 shadow w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15455.761455433681!2d121.00710091942733!3d14.430600369379757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1dca430dd95%3A0xe0d2ee912183e9b7!2sAlmanza%20Uno%2C%20Las%20Pi%C3%B1as%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1660454038795!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
+      <div class="col-md-6">
+        <h3 class="p-sm-2 px-md-4 mt-md-5 mt-sm-5"><strong>Tell us about your Project</strong></h3>
+        <h6>Describe what kind project do you want us to do for you.</h6>
+        <form class="pb-md-5 pb-sm-2 mb-md-2 mb-sm-5" method="POST" action="https://formsubmit.co/d8ecfe2cd27b1166a010888d97484598">
+          <div class="form-group" id="contactform">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Name" required autofocus>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="site_location" id="site_location" placeholder="Site Location" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" id="message" rows="3" placeholder="Tell us more about your project" required></textarea>
+          </div>
+          <button class="btn btn-default bg-dark text-white d-inline-block w-100" type="submit" name="button">
+              <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
+          </button>
+        </form>
+      </div>
 
+    </div>
+  </div>
+</section>
 
 
 <!-- FOOTER -->
-<footer id="end">
-<div class="container-fluid bg-dark text-white">
-  <div class="row">
-    <h6 class="text-center p-3" style="font-family: 'Poppins','Century Gothic';">&copy; 2022 All Rights Reserved | WhiteSquare Architectural Design Studio</h6>
-  </div>
+<div class="container">
+    <footer class="py-5">
+      <div class="row">
+
+        <div class="col-md-6 col-sm-6 offset-md-0 mb-md-3 mb-sm-5">
+
+            <div class="col rsize">
+              <div class="row gx-sm-3">
+                <div class="col-1 align-right">
+                  <i class="fab fa-viber fa-2x"></i>
+                </div>
+                <div class="col-10 pl-sm-3">              
+                  <strong>Phone Number/ Viber:</strong><br>09398426497/ 09184137895
+                </div>
+              </div>
+            </div>
+
+   
+          <div class="row py-2">
+            <div class="col rsize">
+              <div class="row gx-sm-3">
+                <div class="col-1 align-right">
+                  <i class="fas fa-phone-square fa-2x " ></i>
+                </div>
+                <div class="col-10 pl-sm-3">              
+                  <strong>Telephone Landline:</strong><br>02-(8)727-3792
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-2">
+            <div class="col rsize">
+              <div class="row gx-sm-3">
+                <div class="col-1 align-right">
+                  <i class="fas fa-map-marker-alt fa-2x"></i></i>
+                </div>
+                <div class="col-10 pl-sm-3">              
+                  <strong>Address:</strong><br>Almanza Uno, Las Pinas City, Metro Manila, Philippines
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="row py-2">
+            <div class="col rsize">
+              <div class="row gx-sm-3">
+                <div class="col-1 align-right">
+                  <i class="fas fa-envelope fa-2x"></i>
+                </div>
+                <div class="col-10 pl-sm-3">              
+                  <strong>Email Address:</strong><br>ws.archistudio@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          
+          
+        </div> 
+        <div class="col-md-6 col-sm-6 offset-md-0 mb-md-3 mb-sm-5">
+          <div class="col rsize">
+            <div class="row gx-sm-3">
+              <div class="col-1 align-right">
+                <i class="fab fa-viber fa-2x"></i>
+              </div>
+              <div class="col-10 pl-sm-3">              
+                <strong>Facebook:</strong><br>www.facebook.com/ws.archistudio
+              </div>
+            </div>
+          </div>
+
+ 
+        <div class="row py-2">
+          <div class="col rsize">
+            <div class="row gx-sm-3">
+              <div class="col-1 align-right">
+                <i class="fas fa-phone-square fa-2x " ></i>
+              </div>
+              <div class="col-10 pl-sm-3">              
+                <strong>Instagram:</strong><br>www.instagram.com/ws.archistudio
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row py-2">
+          <div class="col rsize">
+            <div class="row gx-sm-3">
+              <div class="col-1 align-right">
+                <i class="fas fa-map-marker-alt fa-2x"></i></i>
+              </div>
+              <div class="col-10 pl-sm-3">              
+                <strong>Tiktok:</strong><br>ws.archistudio
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+   
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-2 border-top">
+        <p>&copy; 2022 White Square Architectural Design Studio. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        </ul>
+      </div>
+    </footer>
 </div>
-</footer>
+
 <!-- JS Core Script for scrolling -->
 <script src="./js/scripts.js"></script>
 <!-- JavaScript Bundle with Popper -->
