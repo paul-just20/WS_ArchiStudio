@@ -3,7 +3,74 @@
 body, html{
   margin: 0;
   padding: 0;
+
 }
+.hidden{
+  display: none;
+}
+/** -- POPUP NEWSLETTER SUBSCRIPTION -- **/
+.rows{height: 100vh;}
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: calc(1.5em + .75rem + 2px);
+  padding: .575rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 52px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control1 {
+  display: block;
+  width: 70%;
+  min-height: calc(1.5em + .75rem + 2px);
+  padding: .575rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.popupcard{
+  padding: 20px;
+  background-color: #eee;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.form-control:focus {
+  color: #050505;
+  background-color: #fff;
+  border-color: #5c5c5c;
+  outline: 0;
+  box-shadow: none;
+}
+.border-rad{
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
+  color: #fff;
+  background-color: #5c5c5c;
+  border-color: #5c5c5c;
+}
+.border-rad:hover{
+  background-color: #000000;
+  border-color: #000000;
+}  /** END OF POP UP MODAL SUBSCRIPTION **/
+
+
 a{
     text-decoration: none;
 }
@@ -12,8 +79,10 @@ a{
         font-family:'Poppins', sans-serif;
         background-color: #fff;
         line-height: 1.5em;
-        font-size: 16px;
+
     }
+
+
     /**  NAVIGATION BAR  **/
 .navbar .navbar-brand{
   padding: 0;
@@ -126,8 +195,8 @@ a{
    
 }
     .card-body{
-    background-color: #fff;
-    color: #000;
+    background-color: rgb(199, 199, 199);
+    color: rgb(0, 0, 0);
 }
 #projects{
     clear: both;
@@ -186,7 +255,7 @@ a{
     font-size: 24px;
   }
   
-  .services .icon-box h4 a {
+  .services .icon-box a {
     color: #292929; /* title text color */
   }
   
@@ -197,8 +266,8 @@ a{
   }
   
   .services .icon-box:hover {
-    background: #000000;
-    border-color: #000;
+    background: hsla(0, 0%, 17%, 0.774); /* box-card background */
+    border-color: hsla(0, 0%, 17%, 0.774);
   }
   
   .services .icon-box:hover .icon {
@@ -212,7 +281,7 @@ a{
   .services .icon-box:hover .icon::before {
     background: #777070; /* Services Icon Offset Color */
   }
-  
+  .services .icon-box:hover h1,
   .services .icon-box:hover h4 a,
   .services .icon-box:hover p {
     color: #fff;
@@ -280,8 +349,19 @@ a{
     border-radius: 0;
   }
   
-  /* change border radius for the tab , apply corners on top*/
-  
+.form-group input,
+.form-control{
+  border-radius: 0px;
+  margin-bottom: 10px;
+
+}
+.rsize{
+ line-height: 1.3em;
+font-size: 16px;
+ vertical-align:auto;
+ margin: 0px;
+ padding-bottom: 5px;
+}
   
 /* MEDIA BREAKPOINTS  */
 @media only screen and (max-width: 992px) {
@@ -369,13 +449,7 @@ a{
  /*  opacity: 0.5; */
 
 }
-.imgrepos{
-   position: relative;
-   top: 0px;
 
-   width: 150%;
-   height:150%;
-}
 
 .overlay h1{
  list-style: 1.5em;
@@ -397,6 +471,11 @@ a{
   font-weight: 500;
   border-radius: 26px;
   padding: 0.4em 1.5em;
+  
+}
+#custbtn-reverse:hover{
+  padding: 0.4em 1.5em;
+  
 }
 .btn-custom:hover{
   background-color: #141414;
@@ -405,6 +484,7 @@ a{
 .btn-custom-reverse:hover{
  color: #141414;
   background-color: #fff;
+  padding: 0.4em 1.5em;
 }
 .banner-right{
   z-index: 0;
