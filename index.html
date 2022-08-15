@@ -24,8 +24,8 @@
         </script>
         <script type="text/javascript">
                $(document).ready(function(){
-                $("index.html#top").scrollTop(300);
         $("#subscribe").modal('show');
+
     });
         </script>
 </head>
@@ -55,51 +55,47 @@
     </div>
 </div>
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg m-0 p-0 fixed-top" id="mainNav">
-        <div class="container-xl">
-          <a class="navbar-brand" href="index.html">
-                <img src="wslogo2.png" alt="WhiteSquare_Design_Studio" height="52" class="d-inline-block align-text-center">
-                <div class="text-wrap" style="width: 10rem; font-size: 0.8rem; line-height: 1rem; float: right; align-items: center; margin-top: 2px;">
-                  WHITESQUARE ARCHITECTURAL DESIGN STUDIO
-                </div>
-              </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav mx-auto p-3 mb-lg-0">
-              <li class="nav-item py-sm-2">
-                <a class="nav-link" href="index.html#top">HOME</a>
-              </li>
-              <li class="nav-item dropdown py-sm-2">
-                <a class="nav-link dropdown-toggle" href="#projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PROJECTS</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#projects">Projects Catalogue</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown py-sm-2">
-                <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  SERVICES</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#services">Services Category</a></li>
-                    <li><a class="dropdown-item" href="#">3D Visualization</a></li>
-                    <li><a class="dropdown-item" href="#">Interior Design</a></li>
-                    <li><a class="dropdown-item" href="#">Exterior Design</a></li>
-                  </ul>
-                </li>
-              <li class="nav-item py-sm-2">
-                <a class="nav-link" href="#about-us" role="button" aria-expanded="false"> ABOUT US</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <a class="btn btn-lg mx-auto" href="#contact-us" type="button" id="custbtn-reverse">Book Now!</a>
-            </form>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg m-0 p-0 fixed-top" id="mainNav">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html">
+          <img src="wslogo2.png" alt="WhiteSquare_Design_Studio" height="52" class="d-inline-block align-text-center">
+          <div class="text-wrap" style="width: 10rem; font-size: 0.8rem; line-height: 1rem; float: right; align-items: center; margin-top: 2px;">
+            WHITESQUARE ARCHITECTURAL DESIGN STUDIO
           </div>
-        </div>
-      </nav>
+        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+      <ul class="navbar-nav mx-auto p-3 mb-lg-0">
+        <li class="nav-item py-sm-2">
+          <a class="nav-link active" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item dropdown py-sm-2">
+          <a class="nav-link dropdown-toggle" href="#projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PROJECTS</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="all-projects.html">All Projects</a></li>
+            <li><a class="dropdown-item" href="residential.html">Residential</a></li>
+            <li><a class="dropdown-item" href="townhouse.html">Townhouse</a></li>
+            <li><a class="dropdown-item" href="apartments.html">Apartments</a></li>
+          </ul>
+        </li>
+        <li class="nav-item py-sm-2">
+          <a class="nav-link" href="#services" role="button" >
+            SERVICES</a>
+          </li>
+        <li class="nav-item py-sm-2">
+          <a class="nav-link" href="#about-us" role="button" aria-expanded="false"> ABOUT US</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <a class="btn btn-lg mx-auto" href="#contact-us" type="button" id="custbtn-reverse">Book Now!</a>
+      </form>
+    </div>
+  </div>
+</nav>
 
 <!-- MAIN-->
 <section id ="top">
@@ -146,19 +142,23 @@
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-dark bg-light shadow ">
             <img src="./images/apartments.jpg" class="card-img-top" alt="...">
-            <span class="tag tag-hot">#latest</span>    
+            <span class="tag tag-hot">#latest</span> 
+            <a href="apartments.html">   
             <div class="card-body text-center">
                 <h6 class="card-title">Apartments</h6>
               </div>
+              </a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-dark bg-light shadow ">
             <img src="./images/townhouses.jpg" class="card-img-top" alt="...">
+            <a href="townhouse.html">
               <div class="card-body text-center">
                 <h6 class="card-title">Townhouses</h6>
               </div>
+              </a>  
           </div>
         </div>
 
@@ -221,9 +221,9 @@
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
 
         <div class="icon-box">
-          <a href="">
+          <a href="visualization.html">
           <div class="icon"><i class="fas fa-cube"></i></div>
-          <h1 class="display-1 display-xs-2 py-md-2 m-0 lh-1 fw-light">35</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
+          <h1 class="display-1 display-xs-2 py-md-2 m-0 lh-1 fw-light">9</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
           <h4>3D Visualization</h4>
           <p>We design beautifully and tell by creating realistic elements and details. This can be combination of both Interior and Exterior Spaces.</p>
         </a>
@@ -232,9 +232,9 @@
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
         <div class="icon-box">
-          <a href="">
+          <a href="interior.html">
           <div class="icon"><i class="fas fa-chair"></i></div>
-          <h1 class="display-1 py-2 m-0 lh-1 fw-light">12</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
+          <h1 class="display-1 py-2 m-0 lh-1 fw-light">3</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
           <h4>Interior Designs</h4>
           <p>We aesthetically practice the art of design spaces suited to its purpose.</p>
         </a>
@@ -243,9 +243,9 @@
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
         <div class="icon-box">
-          <a href="">
+          <a href="exterior.html">
           <div class="icon"><i class="fas fa-archway"></i></div>
-          <h1 class="display-1 py-2 m-0 lh-1 fw-light">67</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
+          <h1 class="display-1 py-2 m-0 lh-1 fw-light">6</h1><p class="mb-5 text-uppercase fw-normal">projects</p>
           <h4>Exterior Designs</h4>
           <p>We increase property value through art patterns of physical structure and materials to result in greater productivity.</p>
         </a>
